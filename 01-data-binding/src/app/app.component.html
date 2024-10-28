@@ -1,0 +1,31 @@
+<!-- Interploation -->
+
+<h2>Welcome {{getUserName()}}</h2>
+<h2>Account Number {{getNumber()}}</h2>
+<h2>OBJECT: {{object | json}}</h2>
+
+<hr>
+
+<!-- Property Binding -->
+
+<a [href]="link">Link to google</a>
+<img [src]="imgUrl" alt="GG image" height="50px" width="50px">
+<hr>
+
+<!-- Event Binding -->
+<br>
+<button class="btn btn-primary btn-sm" (click)="onShowAlert()">Show Alert</button>
+<hr>
+
+<h3>VALUE OF NUMBER: {{number}} </h3>
+<br>
+<button class="btn btn-primary btn-sm" (click)="add()">INCREMENT</button>
+<button class="btn btn-secondary btn-sm" (click)="minus()">DECREMENT</button>
+<button class="btn btn-primary btn-sm" (click)="reset()">RESET</button>
+<hr>
+
+<!-- Local Reference -->
+<input type="text" #input (keyup)="onSubmitText(input.value)">
+<button class="btn btn-primary btn-sm" (click)="onSubmitText(input.value)" >Display</button>
+
+<h4> Input Text : {{inputText}}</h4>
